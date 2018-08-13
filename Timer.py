@@ -5,11 +5,11 @@ import time
 em = pyenergy.EnergyMonitor("EE00")
 
 # Use measurement point 1
-em.enableMeasurementPoint(2)
-em.start(2)
+em.enableMeasurementPoint(1)
+em.start(1)
    
 time.sleep (120)
 
-em.stop(2)
-m = em.getMeasurement(2)
+em.stop(1)
+m = em.getMeasurement(1)
 print "{m.energy}, {m.time}, {m.avg_power}, {m.avg_current},{m.avg_voltage}".format(m=m)
